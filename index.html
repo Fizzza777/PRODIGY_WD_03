@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pro Tic-Tac-Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="game-header">
+        <h1>Tic-Tac-Toe</h1>
+        <div class="mode-selector">
+          <button id="pvp-btn" class="mode-btn active">PvP</button>
+          <button id="ai-btn" class="mode-btn">vs AI</button>
+        </div>
+      </header>
+
+      <main class="game-board-container">
+        <div class="status-bar">
+          <span id="turn-indicator">Player X's Turn</span>
+        </div>
+
+        <div class="game-grid" id="board">
+          <div class="cell" data-index="0"></div>
+          <div class="cell" data-index="1"></div>
+          <div class="cell" data-index="2"></div>
+          <div class="cell" data-index="3"></div>
+          <div class="cell" data-index="4"></div>
+          <div class="cell" data-index="5"></div>
+          <div class="cell" data-index="6"></div>
+          <div class="cell" data-index="7"></div>
+          <div class="cell" data-index="8"></div>
+        </div>
+
+        <div class="controls">
+          <button id="restart-btn" class="action-btn">Restart Game</button>
+        </div>
+      </main>
+
+      <!-- Scoreboard (Optional enhancement) -->
+      <div class="scoreboard">
+        <div class="score-box x-score">
+          <span class="label">Player X</span>
+          <span class="count" id="score-x">0</span>
+        </div>
+        <div class="score-box ties-score">
+          <span class="label">Ties</span>
+          <span class="count" id="score-ties">0</span>
+        </div>
+        <div class="score-box o-score">
+          <span class="label">Player O</span>
+          <span class="count" id="score-o">0</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for Winner Announcement -->
+    <div id="winner-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2 id="winner-text">Player X Wins!</h2>
+        <div class="modal-actions">
+          <button id="quit-btn" class="secondary-btn">Quit</button>
+          <button id="next-round-btn" class="primary-btn">Next Round</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
